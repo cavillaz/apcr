@@ -2,9 +2,9 @@
 // index.php
 
 // Incluir los controladores necesarios
-require_once  __DIR__ . 'app/controllers/UsuariosController.php';
-require_once  __DIR__ .'app/controllers/ParqueaderosController.php';
-require_once  __DIR__ .'app/controllers/ZonasComunesController.php';
+require_once  __DIR__ .'/app/controllers/UsuariosController.php';
+require_once  __DIR__ .'/app/controllers/ParqueaderosController.php';
+require_once  __DIR__ .'/app/controllers/ZonasComunesController.php';
 
 
 
@@ -173,3 +173,4 @@ switch ($request) {
         echo 'Página no encontrada';
         break;
 }
+error_log("Solicitud recibida: " . $request);
