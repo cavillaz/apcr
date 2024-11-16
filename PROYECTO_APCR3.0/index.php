@@ -9,7 +9,8 @@ require_once 'app/controllers/ZonasComunesController.php';
 
 
 // Obtener la URL solicitada
-$request = $_SERVER['REQUEST_URI'];
+#$request = $_SERVER['REQUEST_URI'];
+$request = str_replace('/PROYECTO_APCR3.0', '', $_SERVER['REQUEST_URI']);
 
 // Eliminar parámetros adicionales de la URL si existen (por ejemplo, ?id=1)
 $request = strtok($request, '?');
