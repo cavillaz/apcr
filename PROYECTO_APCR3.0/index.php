@@ -2,9 +2,9 @@
 // index.php
 
 // Incluir los controladores necesarios
-require_once  __DIR__ .'/app/controllers/UsuariosController.php';
-require_once  __DIR__ .'/app/controllers/ParqueaderosController.php';
-require_once  __DIR__ .'/app/controllers/ZonasComunesController.php';
+require_once  'app/controllers/UsuariosController.php';
+require_once 'app/controllers/ParqueaderosController.php';
+require_once 'app/controllers/ZonasComunesController.php';
 
 
 
@@ -14,6 +14,8 @@ $request = str_replace('/PROYECTO_APCR3.0', '', $_SERVER['REQUEST_URI']);
 
 // Eliminar parámetros adicionales de la URL si existen (por ejemplo, ?id=1)
 $request = strtok($request, '?');
+
+error_log("Solicitud recibida: " . $request);
 
 // Enrutamiento básico utilizando switch
 switch ($request) {
@@ -173,4 +175,3 @@ switch ($request) {
         echo 'Página no encontrada';
         break;
 }
-error_log("Solicitud recibida: " . $request);
